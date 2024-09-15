@@ -30,3 +30,63 @@
   body {
     font-family: 'Kamerik', sans-serif;
   }
+  .group:hover .group-hover\:flex {
+    display: flex;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .relative {
+    position: relative;
+  }
+  
+  .absolute {
+    position: absolute;
+  }
+  
+  .w-full {
+    width: 100%;
+  }
+  
+  .h-full {
+    height: 100%;
+  }
+  
+  .object-cover {
+    object-fit: cover;
+  }
+  
+  .bg-black {
+    background-color: black;
+  }
+  
+  .text-white {
+    color: white;
+  }
+  
+  .text-gray-300 {
+    color: #D1D5DB;
+  }
+  
+  .hover\:text-gray-300:hover {
+    color: #D1D5DB;
+  }
+  
+  .font-semibold {
+    font-weight: 600;
+  }
+  
+  .space-x-10 {
+    gap: 2.5rem;
+  }
+  
+  .space-y-2 {
+    gap: 0.5rem;
+  }
+  
+  .p-8 {
+    padding: 2rem;
+  }
+  

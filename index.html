@@ -85,11 +85,11 @@
 <body>
 
   <!-- Navbar Logo -->
-  <nav class="relative px-4 py-4 flex justify-between items-center lg:w-8/12 lg:mx-auto bg-white">
+  <nav class="relative px-4 py-4 flex justify-between items-center lg:w-9/12 lg:mx-auto bg-white">
     <a class="text-2xl lg:text-3xl font-bold leading-none" href="#">
       <img src="./assets/images/lifeplan.png" class="w-32" alt="Navbar Logo">
     </a>
-
+  
     <!-- Mobile Menu -->
     <div class="lg:hidden">
       <button class="navbar-burger flex items-center text-blue-600 p-3">
@@ -99,16 +99,58 @@
         </svg>
       </button>
     </div>
-    <!-- Mobile Menu -->
-
+  
     <!-- Links -->
     <ul class="hidden lg:flex xl:space-x-3 lg:space-x-2 lg:ml-6">
       <li><a class="text-sm text-black-400 links p-2 rounded " href="#">Insurance 101</a></li>
-      <li><a class="text-sm text-black-400 links p-2 rounded " href="#">Learn</a></li>
+  
+      <!-- Services Dropdown -->
+     <li class="relative group">
+  <a class="text-sm text-black-400 links p-2 rounded cursor-pointer" href="#">Services</a>
+  <!-- Megamenu starts here -->
+  <div class="absolute left-0  mt-2 hidden bg-transparent backdrop-blur-md rounded-xl  shadow-lg group-hover:flex justify-between p-8 transform translate-x-full transition-transform duration-300 ease-in-out ">
+    <div class="flex space-x-10 w-6/12 ">
+      <div>
+        <h3 class="font-semibold mb-4">Policy Quoting</h3>
+        <ul class="text-sm space-y-2">
+          <li><a class="block text-sm hover:text-blue-500" href="#">Quoting on AMS</a></li>
+          <li><a class="block hover:text-blue-500" href="#">Quoting Carrier Website</a></li>
+          <li><a class="block hover:text-blue-500" href="#">Manual Submissions</a></li>
+          <li><a class="block hover:text-blue-500" href="#">Requoting Renewals</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-4">Servicing</h3>
+        <ul class="text-sm space-y-2">
+          <li><a class="block hover:text-blue-500" href="#">Services/Needs Personal Lines & Commercial Lines</a></li>
+          <li><a class="block hover:text-blue-500" href="#">ID Cards</a></li>
+          <li><a class="block hover:text-blue-500" href="#">COIs/EOIs</a></li>
+          <li><a class="block hover:text-blue-500" href="#">RCT/RCE</a></li>
+          <li><a class="block hover:text-blue-500" href="#">Cancellation Processing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-4">Additional Services</h3>
+        <ul class="text-sm space-y-2">
+          <li><a class="block hover:text-blue-500" href="#">Changes to Billing</a></li>
+          <li><a class="block hover:text-blue-500" href="#">Dec Page Requests Mortgage Changes</a></li>
+          <li><a class="block hover:text-blue-500" href="#">General Endorsements</a></li>
+          <li><a class="block hover:text-blue-500" href="#">Requests for Copies of Documents</a></li>
+          <li><a class="block hover:text-blue-500" href="#">Data Entry</a></li>
+        </ul>
+      </div>
+    </div>
+
+    
+  </div>
+  <!-- Megamenu ends here -->
+</li>
+
+  
       <li><a class="text-sm text-black-400 links p-2 rounded " href="#">Pricing</a></li>
       <li><a class="text-sm text-black-400 links p-2 rounded " href="#">Help</a></li>
     </ul>
-
+  
     <!-- Login Buttons -->
     <div class="hidden lg:flex lg:items-center lg:ml-auto space-x-4">
       <a class="xl:py-2 xl:px-6 lg:px-1 lg:py-2 hover:bg-blue-500 text-sm text-blue-500 hover:text-white font-bold transition duration-200"
@@ -117,20 +159,17 @@
         href="#">Calculate yours</a>
     </div>
   </nav>
-
-
+  
 
 
   <!-- Mobile Menu  -->
-  <div class="navbar-menu relative z-50 hidden">
+  <div class="navbar-menu relative z-50 hidden lg:hidden">
     <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
-    <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+    <nav class="fixed top-0 left-0 bottom-0  flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
       <div class="flex items-center mb-8">
         <a class="mr-auto text-3xl font-bold leading-none" href="#">
           <svg class="h-12" alt="logo" viewBox="0 0 10240 10240">
-            <path xmlns="http://www.w3.org/2000/svg"
-              d="M8284 9162 c-2 -207 -55 -427 -161 -667 -147 -333 -404 -644 -733 -886 -81 -59 -247 -169 -256 -169 -3 0 -18 -9 -34 -20 -26 -19 -344 -180 -354 -180 -3 0 -29 -11 -58 -24 -227 -101 -642 -225 -973 -290 -125 -25 -397 -70 -480 -80 -22 -3 -76 -9 -120 -15 -100 -13 -142 -17 -357 -36 -29 -2 -98 -7 -153 -10 -267 -15 -436 -28 -525 -40 -14 -2 -45 -7 -70 -10 -59 -8 -99 -14 -130 -20 -14 -3 -41 -7 -60 -11 -19 -3 -39 -7 -45 -8 -5 -2 -28 -6 -50 -10 -234 -45 -617 -165 -822 -257 -23 -10 -45 -19 -48 -19 -7 0 -284 -138 -340 -170 -631 -355 -1107 -842 -1402 -1432 -159 -320 -251 -633 -308 -1056 -26 -190 -27 -635 -1 -832 3 -19 7 -59 10 -89 4 -30 11 -84 17 -120 6 -36 12 -77 14 -91 7 -43 33 -174 39 -190 3 -8 7 -28 9 -45 6 -35 52 -221 72 -285 7 -25 23 -79 35 -120 29 -99 118 -283 189 -389 67 -103 203 -244 286 -298 75 -49 178 -103 196 -103 16 0 27 16 77 110 124 231 304 529 485 800 82 124 153 227 157 230 3 3 28 36 54 74 116 167 384 497 546 671 148 160 448 450 560 542 14 12 54 45 90 75 88 73 219 172 313 238 42 29 77 57 77 62 0 5 -13 34 -29 66 -69 137 -149 405 -181 602 -7 41 -14 82 -15 90 -1 8 -6 46 -10 83 -3 37 -8 77 -10 88 -2 11 -7 65 -11 122 -3 56 -8 104 -9 107 -2 3 0 12 5 19 6 10 10 8 15 -10 10 -34 167 -346 228 -454 118 -210 319 -515 340 -515 4 0 40 18 80 40 230 128 521 255 787 343 118 40 336 102 395 113 28 5 53 11 105 23 25 5 59 12 75 15 17 3 41 8 55 11 34 7 274 43 335 50 152 18 372 29 565 29 194 0 481 -11 489 -19 2 -3 -3 -6 -12 -6 -9 -1 -20 -2 -24 -3 -33 -8 -73 -16 -98 -21 -61 -10 -264 -56 -390 -90 -649 -170 -1243 -437 -1770 -794 -60 -41 -121 -82 -134 -93 l-24 -18 124 -59 c109 -52 282 -116 404 -149 92 -26 192 -51 220 -55 17 -3 64 -12 105 -21 71 -14 151 -28 230 -41 19 -3 46 -7 60 -10 14 -2 45 -7 70 -10 25 -4 56 -8 70 -10 14 -2 53 -7 88 -10 35 -4 71 -8 81 -10 10 -2 51 -6 92 -9 101 -9 141 -14 147 -21 3 -3 -15 -5 -39 -6 -24 0 -52 -2 -62 -4 -21 -4 -139 -12 -307 -22 -242 -14 -700 -7 -880 13 -41 4 -187 27 -250 39 -125 23 -274 68 -373 111 -43 19 -81 34 -86 34 -4 0 -16 -8 -27 -17 -10 -10 -37 -33 -59 -52 -166 -141 -422 -395 -592 -586 -228 -257 -536 -672 -688 -925 -21 -36 -43 -66 -47 -68 -4 -2 -8 -7 -8 -11 0 -5 -24 -48 -54 -97 -156 -261 -493 -915 -480 -935 2 -3 47 -21 101 -38 54 -18 107 -36 118 -41 58 -25 458 -138 640 -181 118 -27 126 -29 155 -35 14 -2 45 -9 70 -14 66 -15 137 -28 300 -55 37 -7 248 -33 305 -39 28 -3 84 -9 125 -13 163 -16 792 -8 913 12 12 2 58 9 102 15 248 35 423 76 665 157 58 19 134 46 170 60 86 33 344 156 348 166 2 4 8 7 13 7 14 0 205 116 303 184 180 126 287 216 466 396 282 281 511 593 775 1055 43 75 178 347 225 455 100 227 236 602 286 790 59 220 95 364 120 485 6 28 45 245 50 275 2 14 7 41 10 60 3 19 8 49 10 65 2 17 6 46 9 65 15 100 35 262 40 335 3 39 8 89 10 112 22 225 33 803 21 1043 -3 41 -7 129 -11 195 -3 66 -8 136 -10 155 -2 19 -6 76 -10 125 -3 50 -8 101 -10 115 -2 14 -6 57 -10 95 -7 72 -12 113 -20 175 -2 19 -7 55 -10 80 -6 46 -43 295 -51 340 -2 14 -9 54 -15 90 -5 36 -16 97 -24 135 -8 39 -17 84 -20 100 -12 68 -18 97 -50 248 -19 87 -47 204 -61 260 -14 56 -27 109 -29 117 -30 147 -232 810 -253 832 -4 4 -7 -23 -8 -60z">
-            </path>
+            <!-- SVG Path here -->
           </svg>
         </a>
         <button class="navbar-close">
@@ -146,10 +185,54 @@
             <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
               href="#">Insurance 101</a>
           </li>
+          <!-- Services with Megamenu -->
           <li class="mb-1">
-            <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
-              href="#">Learn</a>
+            <button class=" p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded flex  items-center justify-between w-full"
+              onclick="toggleMobileMegamenu()">
+              Services
+              <svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+              </svg>
+            </button>
+  
+            <!-- Megamenu for Mobile starts here -->
+            <div id="mobile-megamenu" class="hidden">
+              <div class="flex flex-col space-y-6 py-6">
+                <div>
+                  <h3 class="font-semibold mb-2">Policy Quoting</h3>
+                  <ul class="text-sm space-y-2">
+                    <li><a class="block hover:text-gray-300" href="#">Quoting on AMS</a></li>
+                    <li><a class="block hover:text-gray-300" href="#">Quoting Carrier Website</a></li>
+                    <li><a class="block hover:text-gray-300" href="#">Manual Submissions</a></li>
+                    <li><a class="block hover:text-gray-300" href="#">Requoting Renewals</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 class="font-semibold mb-2">Servicing</h3>
+                  <ul class="text-sm space-y-2">
+                    <li><a class="block hover:text-gray-300" href="#">Services/Needs Personal Lines & Commercial Lines</a></li>
+                    <li><a class="block hover:text-gray-300" href="#">ID Cards</a></li>
+                    <li><a class="block hover:text-gray-300" href="#">COIs/EOIs</a></li>
+                    <li><a class="block hover:text-gray-300" href="#">RCT/RCE</a></li>
+                    <li><a class="block hover:text-gray-300" href="#">Cancellation Processing</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 class="font-semibold mb-2">Additional Services</h3>
+                  <ul class="text-sm space-y-2">
+                    <li><a class="block hover:text-gray-300" href="#">Changes to Billing</a></li>
+                    <li><a class="block hover:text-gray-300" href="#">Dec Page Requests Mortgage Changes</a></li>
+                    <li><a class="block hover:text-gray-300" href="#">General Endorsements</a></li>
+                    <li><a class="block hover:text-gray-300" href="#">Requests for Copies of Documents</a></li>
+                    <li><a class="block hover:text-gray-300" href="#">Data Entry</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- Megamenu for Mobile ends here -->
           </li>
+  
           <li class="mb-1">
             <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
               href="#">Pricing</a>
@@ -177,15 +260,16 @@
       </div>
     </nav>
   </div>
+  
 
 
-  <div class="carousel-section mx-auto lg:w-8/12 flex-col">
+  <div class="carousel-section mx-auto lg:w-9/12 flex-col">
     <!-- Row 1 -->
     <div class="row-1 w-full flex flex-col md:mt-24 lg:flex-row">
       <div class="w-full lg:w-8/12 md:-mt-16 text-center  lg:text-left ">
-        <h1 class="font-bold text-3xl 2xl:text-6xl lg:text-4xl  lg:p-8  pt-10 xl:pt-6  mb-6 lg:mb-0">Free Your Insurance
+        <h1 class="font-bold text-3xl xl:text-5xl lg:text-xl  lg:p-8  pt-10 xl:mt-20    mb-6 lg:mb-0">Free Your Insurance
           Agency
-          <br> from Time-Consuming Tasks
+           from Time-Consuming Tasks
         </h1>
         <p class="lg:pl-9 text-base lg:text-lg p-4 md:p-0 ">The Bolt Solution handles quoting, renewals, and policy
           management<br>
@@ -206,9 +290,9 @@
           </div>
         </div>
 
-        <div class="input-container flex flex-col mx-auto lg:flex-row w-full max-w-xl  2xl:ml-3  ">
+        <div class="input-container flex flex-col mx-auto lg:flex-row w-full max-w-xl  xl:ml-3 lg:-mt-4 lg:-ml-5   ">
           <input type="email" placeholder="Enter your email"
-            class="email-input w-80 mx-auto md:w-full lg:w-9/12 mt-4 lg:mt-10 p-3   border shadow-sm shadow-stone-400  border-gray-300 outline-none">
+            class="email-input w-80 mx-auto md:w-full lg:w-9/12 mt-4 lg:mt-10 p-3    shadow-sm shadow-stone-400  border outline-none">
           <button
             class="get-started-button bg-blue-600 mt-10 mb-10 lg:mb-0 text-white px-4 py-2 lg:py-0  lg:mt-10 w-44 mx-auto shadow-sm shadow-stone-400   font-bold">Get
             Started</button>
@@ -223,11 +307,11 @@
     <div class="row-2 flex flex-col lg:flex-row mt-8 lg:mt-24">
       <div class="w-full lg:w-8/12 text-center lg:text-left">
         <div class="info w-full ">
-          <h1 class="text-2xl xl:text-4xl xl:-mt-14  font-bold p-4">Stakes - What Are You Saving Your Users From?
+          <h1 class="text-2xl xl:text-4xl lg:-mt-14  font-bold p-4">Stakes - What Are You Saving <br> Your Users From?
           </h1>
-          <p class="p-4">Insurance agencies are bogged down by endless quoting, renewals, and servicing existing
-            policies, leaving little room to generate new business. The time spent on backend tasks eats away at
-            productivity, employee morale, and ultimately, revenue.
+          <p class="p-4">Insurance agencies are bogged down by endless quoting, renewals, and <Br> servicing existing
+            policies, leaving little room to generate new business.<br> The time spent on backend tasks eats away at
+            productivity, employee morale, <br> and ultimately, revenue.
           </p>
           <a href="#" class="text-blue-500 p-4 links">Check My Estimation <i class="fas fa-arrow-right"></i></a>
         </div>
@@ -245,15 +329,15 @@
 
     <div class="row-3-row-4 bg-orange-100/20">
       <!-- Row 3 -->
-      <div class="row-3 flex flex-col lg:flex-row mt-8 md:mt-56 md:p-10">
-        <div class="w-full lg:w-8/12 text-center lg:text-left">
+      <div class="row-3 flex flex-col lg:flex-row mt-8 md:mt-40 md:p-10">
+        <div class="w-full lg:w-5/12 text-center lg:text-left">
           <div class="info">
             <span class="text-xs font-bold p-4 text-blue-500">WHY CHOOSE LIFEPLAN</span>
-            <h1 class="text-2xl xl:text-4xl font-bold p-4">Value Prop - How Are You Solving the Problem?</h1>
+            <h1 class="text-2xl xl:text-4xl font-bold p-4"> How Are You Solving the Problem?</h1>
           </div>
         </div>
-        <div class="w-full lg:w-5/12 mt-4 lg:mt-10 lg:mr-32 text-center">
-          <p class="text-sm ">At The Bolt Solution, we eliminate the burden of backend operations. Our technology-driven
+        <div class="w-full lg:w-7/12 mt-4 lg:mt-10 ">
+          <p class="text-sm  p-6 md:p-0">At The Bolt Solution, we eliminate the burden of backend operations. Our technology-driven
             platform provides fast, accurate quoting, proactive renewal management, and comprehensive policy
             support—allowing your team to focus on what truly matters: driving growth. With years of industry expertise
             and a commitment to efficiency, agencies trust us to handle their backend tasks seamlessly. We empower you
@@ -293,7 +377,7 @@
 
 
     <!-- Row 5 -->
-    <div class="row-5 flex flex-col lg:flex-row mt-8 md:mt-56">
+    <div class="row-5 flex flex-col lg:flex-row mt-8 md:mt-40">
       <div class="w-full lg:w-8/12 text-center lg:text-left">
         <div class="info">
           <span class="text-xs font-bold p-4 text-blue-500">WHAT WE OFFER</span>
@@ -452,7 +536,7 @@
         while you’re alive.</p>
       <div class="flex w-full px-0 lg:pr-12">
         <input type="text" placeholder="Your email address"
-          class="p-2 w-full border bg-blue-500 text-white border-gray-300">
+          class="p-2 w-full border bg-blue-500 text-white border-blue-500">
         <button
           class="bg-white text-blue-600 font-bold w-44 hover:bg-blue-600 hover:text-white transition duration-100">Get
           Started</button>
@@ -566,6 +650,10 @@
       }
     }
   });
+  function toggleMobileMegamenu() {
+    const megamenu = document.getElementById('mobile-megamenu');
+    megamenu.classList.toggle('hidden');
+  }
 </script>
 
 </html>
