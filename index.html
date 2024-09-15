@@ -670,6 +670,14 @@
 
   // Automatically switch testimonials every 5 seconds (5000ms)
   setInterval(showNextSlide, 5000);
+  function toggleMobileMegamenu() {
+    const megamenu = document.getElementById('mobile-megamenu');
+    if (megamenu.classList.contains('hidden')) {
+      megamenu.classList.remove('hidden');
+    } else {
+      megamenu.classList.add('hidden');
+    }
+  }
 </script>
 
 </html>
