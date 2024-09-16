@@ -1,102 +1,100 @@
 .links {
-    position: relative;
-    text-decoration: none;
-  }
-  
-  .links::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background-color: #3b82f6; /* Change to your desired underline color */
-    bottom: 0;
-    left: 0;
-    transition: width 0.2s ease-in-out;
-  }
-  
-  .links:hover::after {
-    width: 100%;
-  }
-  
-  @font-face {
-    font-family: 'Kamerik';
-    src: url('./font/Kamerik\ 205\ Book.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    
-    
-  }
-  
-  body {
-    font-family: 'Kamerik', sans-serif;
-  }
-  .group:hover .group-hover\:flex {
-    display: flex;
-  }
-  
-  .hidden {
-    display: none;
-  }
-  
-  .relative {
-    position: relative;
-  }
-  
-  .absolute {
-    position: absolute;
-  }
-  
-  .w-full {
-    width: 100%;
-  }
-  
-  .h-full {
-    height: 100%;
-  }
-  
-  .object-cover {
-    object-fit: cover;
-  }
-  
-  .bg-black {
-    background-color: black;
-  }
-  
-  .text-white {
-    color: white;
-  }
-  
-  .text-gray-300 {
-    color: #D1D5DB;
-  }
-  
-  .hover\:text-gray-300:hover {
-    color: #D1D5DB;
-  }
-  
-  .font-semibold {
-    font-weight: 600;
-  }
-  
-  .space-x-10 {
-    gap: 2.5rem;
-  }
-  
-  .space-y-2 {
-    gap: 0.5rem;
-  }
-  
-  .p-8 {
-    padding: 2rem;
-  }
-  .testimonial-slide {
-    transition: opacity 0.5s ease-in-out;
-  }
+  position: relative;
+  text-decoration: none;
+}
 
-  .hidden {
-    display: none;
-  }
+.links::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #3b82f6; /* Change to your desired underline color */
+  bottom: 0;
+  left: 0;
+  transition: width 0.2s ease-in-out;
+}
 
-  .active {
-    display: block;
-  }
+.links:hover::after {
+  width: 100%;
+}
+
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.group:hover .group-hover\:flex {
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.object-cover {
+  object-fit: cover;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-gray-300 {
+  color: #d1d5db;
+}
+
+.hover\:text-gray-300:hover {
+  color: #d1d5db;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.space-x-10 {
+  gap: 2.5rem;
+}
+
+.space-y-2 {
+  gap: 0.5rem;
+}
+
+.p-8 {
+  padding: 2rem;
+}
+.testimonial-slide {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.hidden {
+  display: none;
+}
+
+.active {
+  display: block;
+}
