@@ -8,7 +8,7 @@
   position: absolute;
   width: 0;
   height: 2px;
-  background-color: #3b82f6; /* Change to your desired underline color */
+  background-color: #22227c; /* Change to your desired underline color */
   bottom: 0;
   left: 0;
   transition: width 0.2s ease-in-out;
@@ -18,11 +18,15 @@
   width: 100%;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 .bebas-neue-regular {
   font-family: "Bebas Neue", sans-serif;
-  font-weight: 400;
+  font-weight: 0;
   font-style: normal;
 }
+
+
 
 body {
   font-family: "Bebas Neue", sans-serif;
@@ -97,4 +101,64 @@ body {
 
 .active {
   display: block;
+}
+
+
+.container {
+  position : relative;
+  display : flex;
+  align-items : center;
+  justify-content : center;
+  flex-wrap : wrap;
+  padding : 30px;  
+}
+
+.container .card {
+  position: relative;
+  max-width : 300px;
+  height : 215px;  
+  display : flex;
+  flex-direction : column;
+  transition : 0.3s ease-in-out;
+}
+.container .card:hover {
+  height : 320px;    
+}
+
+
+.container .card .image {
+  position : relative;
+  width : 260px;
+  height : 260px;
+  
+  top : -40%;
+  left: 8px;
+  box-shadow : 0 5px 20px rgba(0,0,0,0.2);
+  z-index : 1;
+}
+
+.container .card .image img {
+  max-width : 100%;
+  border-radius : 15px;
+}
+
+.container .card .content {
+  position : relative;
+  top : -140px;
+  padding : 10px 15px;
+  color : #111;
+  text-align : center;
+  
+  visibility : hidden;
+  opacity : 0;
+  transition : 0.3s ease-in-out;
+    
+}
+
+.container .card:hover .content {
+   margin-top : 30px;
+   visibility : visible;
+   opacity : 1;
+   transition-delay: 0.2s;
+  
 }
