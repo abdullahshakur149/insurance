@@ -98,3 +98,11 @@ body {
 .active {
   display: block;
 }
+/* contact form */
+.contact {
+  padding: 25px;
+}
+
+.grid div {
+  margin-bottom: 10px;
+}

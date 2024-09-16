@@ -17,6 +17,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
+  <!-- css cdn -->
+
   <!-- internal css -->
   <style>
     .icon {
@@ -517,6 +519,88 @@
     </video>
   </div>
 
+
+  <section id="contact" class="contact section py-16">
+    <!-- Section Title -->
+    <div class="container mx-auto text-center" data-aos="fade-up">
+      <h2 class="text-3xl font-bold text-blue-800">Contact</h2>
+      <p class="text-gray-500 mt-2">
+        Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit
+      </p>
+    </div>
+    <!-- End Section Title -->
+
+    <div class="container mx-auto mt-12" data-aos="fade-up" data-aos-delay="100">
+      <div class="flex flex-wrap lg:flex-nowrap justify-center lg:justify-between space-y-6 lg:space-y-0 lg:space-x-6">
+        <!-- Contact Info Section -->
+        <div class="w-full lg:w-1/3 flex justify-center lg:justify-start">
+          <div class="info-container bg-gray-100 p-8 rounded-lg shadow-lg w-full lg:w-auto">
+            <div class="info-item flex mb-8" data-aos="fade-up" data-aos-delay="200">
+              <i class="bi bi-geo-alt text-yellow-500 text-3xl mr-4"></i>
+              <div>
+                <h3 class="text-xl font-semibold text-blue-800">Address</h3>
+                <p class="text-gray-600">A108 Adam Street, New York, NY 535022</p>
+              </div>
+            </div>
+            <div class="info-item flex mb-8" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-telephone text-yellow-500 text-3xl mr-4"></i>
+              <div>
+                <h3 class="text-xl font-semibold text-blue-800">Call Us</h3>
+                <p class="text-gray-600">+1 5589 55488 55</p>
+              </div>
+            </div>
+            <div class="info-item flex mb-8" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-envelope text-yellow-500 text-3xl mr-4"></i>
+              <div>
+                <h3 class="text-xl font-semibold text-blue-800">Email Us</h3>
+                <p class="text-gray-600">info@example.com</p>
+              </div>
+            </div>
+            <div class="info-item flex" data-aos="fade-up" data-aos-delay="500">
+              <i class="bi bi-clock text-yellow-500 text-3xl mr-4"></i>
+              <div>
+                <h3 class="text-xl font-semibold text-blue-800">Open Hours</h3>
+                <p class="text-gray-600">Mon-Sat: 11AM - 23PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Contact Info Section -->
+
+        <!-- Contact Form Section -->
+        <div class="w-full lg:w-2/3">
+          <form action="forms/contact.php" method="post" class="bg-white p-8 rounded-lg shadow-lg space-y-6"
+            data-aos="fade" data-aos-delay="100">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <input type="text" name="name"
+                  class="w-full p-3 border border-yellow-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800"
+                  placeholder="Your Name" required>
+              </div>
+              <div>
+                <input type="email" name="email"
+                  class="w-full p-3 border border-yellow-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800"
+                  placeholder="Your Email" required>
+              </div>
+            </div>
+            <div>
+              <input type="text" name="subject"
+                class="w-full p-3 border border-yellow-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800"
+                placeholder="Subject" required>
+            </div>
+            <div>
+              <textarea name="message" rows="8"
+                class="w-full p-3 border border-yellow-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800"
+                placeholder="Message" required></textarea>
+            </div>
+          </form>
+        </div>
+        <!-- End Contact Form Section -->
+      </div>
+    </div>
+  </section>
+
+
   <!-- Row 10 (Testimonial and Contact Section) -->
   <div
     class="row-10 flex flex-col mb-16 lg:flex-row justify-between items-center mt-8 space-y-8 lg:space-y-0 lg:space-x-8">
@@ -569,6 +653,8 @@
       </div>
     </div>
   </div>
+
+
 
   <!-- Row 12 (Footer Section) -->
   <footer class="row-12 py-12 mt-8 text-center lg:text-left ">
@@ -634,6 +720,8 @@
 
 </body>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script>
 
   // Burger menus
