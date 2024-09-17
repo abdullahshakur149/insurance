@@ -162,13 +162,13 @@
         <!-- Megamenu ends here -->
       </li>
 
-      <li><a class="text-md text-black-400 links p-2 rounded" href="#">Help</a></li>
+      <li><a class="text-md text-black-400 links p-2 rounded" href="#register">Help</a></li>
     </ul>
 
     <!-- Login Buttons -->
     <div class="hidden lg:flex lg:items-center lg:ml-auto space-x-4">
       <a class="xl:py-2 xl:px-6 lg:px-1 lg:py-2 hover:bg-fonttext-fontcolor text-sm text-fontcolor hover:text-white hover:bg-fontcolor font-bold transition duration-200"
-        href="#">Contact Us</a>
+        href="#contact">Contact Us</a>
       <a class="xl:py-2 xl:px-6 lg:px-1 lg:py-2 hover:bg-fontcolor text-sm text-fontcolor hover:text-white font-bold border border-fontcolor transition duration-200"
         href="#">Calculate yours</a>
     </div>
@@ -271,7 +271,7 @@
       <div class="mt-auto">
         <div class="pt-6">
           <a class="block px-4 py-3 mb-3  text-xs text-center font-semibold leading-none bg-gray-50 hover:bg-gray-100 rounded-xl"
-            href="#">Sign in</a>
+            href="#contact">Contact Us</a>
           <a class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-600 hover:bg-blue-700  rounded-xl"
             href="#">Calculate yours</a>
         </div>
@@ -490,7 +490,7 @@
     
 
     <!-- Row 7 -->
-    <div class="row-7 mt-8 text-center md:mt-48">
+    <div id="register" class="row-7 mt-8 text-center md:mt-48">
       <h1 class="text-fontcolor font-bold text-xl font-futuraAlt">HOW TO</h1>
       <h1 class="text-2xl lg:text-4xl font-bold mt-5 font-futuraAlt">Register in simple steps</h1>
       <p class="mt-4 p-4 lg:pl-40 lg:pr-40 md:mb-10">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi
@@ -570,9 +570,9 @@
   </div>
 
 
-  <section id="contact" class="contact section py-16">
+  <section id="contact" class=" w-12/12  py-16">
     <!-- Section Title -->
-    <div class="container mx-auto text-center" data-aos="fade-up">
+    <div class="container  mx-auto text-center" data-aos="fade-up">
       <h2 class="text-3xl font-bold text-blue-800">Contact</h2>
       <p class="text-gray-500 mt-2">
         Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit
@@ -633,6 +633,30 @@
                   placeholder="Your Email" required>
               </div>
             </div>
+
+            <!-- New Phone Number Input -->
+            <div>
+              <input type="tel" name="phone"
+                class="w-full p-3 border border-yellow-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800"
+                placeholder="Your Phone Number" required pattern="[0-9]{10}">
+            </div>
+
+            <!-- New Date and Time Selection -->
+            <div>
+              <label for="date" class="block mb-2 text-sm font-medium text-gray-700">Select Date</label>
+              <input type="date" id="date" name="date" class="w-full p-3 border border-yellow-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800" required>
+            </div>
+            <div>
+              <label for="time" class="block mb-2 text-sm font-medium text-gray-700">Select Time</label>
+              <select id="time" name="time" class="w-full p-3 border border-yellow-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800" required>
+                <option value="" disabled selected>Select a time</option>
+                <option value="10:00">10:00 AM</option>
+                <option value="11:00">11:00 AM</option>
+                <option value="14:00">2:00 PM</option>
+                <option value="16:00">4:00 PM</option>
+              </select>
+            </div>
+
             <div>
               <input type="text" name="subject"
                 class="w-full p-3 border border-yellow-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800"
@@ -643,12 +667,16 @@
                 class="w-full p-3 border border-yellow-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800"
                 placeholder="Message" required></textarea>
             </div>
+
+            <div class="text-center">
+              <button type="submit" class="bg-blue-800 text-white py-3 px-6 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500">Submit</button>
+            </div>
           </form>
         </div>
         <!-- End Contact Form Section -->
       </div>
     </div>
-  </section>
+</section>
 
 
   <!-- Row 10 (Testimonial and Contact Section) -->
@@ -836,6 +864,18 @@
       megamenu.classList.add('hidden');
     }
   }
+</script>
+<script>
+  // Predefined time slots based on date selection
+  document.getElementById('date').addEventListener('change', function() {
+    const selectedDate = this.value;
+    const timeSelect = document.getElementById('time');
+    // Example logic: You can add more sophisticated rules based on actual requirements.
+    if (selectedDate) {
+      // Enable and show predefined time slots for that date.
+      timeSelect.disabled = false;
+    }
+  });
 </script>
 
 </html>
