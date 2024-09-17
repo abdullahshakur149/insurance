@@ -93,6 +93,13 @@
       /* Light gray line */
     }
   </style>
+  <style>
+    #time-container {
+      opacity: 0;
+      max-height: 0;
+      transition: all 0.5s ease-in-out;
+    }
+  </style>
 </head>
 
 <body>
@@ -570,9 +577,9 @@
   </div>
 
 
-  <section id="contact" class=" w-12/12  py-16">
+  <section id="contact" class="contact section py-16">
     <!-- Section Title -->
-    <div class="container  mx-auto text-center" data-aos="fade-up">
+    <div class="container mx-auto text-center" data-aos="fade-up">
       <h2 class="text-3xl font-bold text-blue-800">Contact</h2>
       <p class="text-gray-500 mt-2">
         Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit
@@ -641,12 +648,14 @@
                 placeholder="Your Phone Number" required pattern="[0-9]{10}">
             </div>
 
-            <!-- New Date and Time Selection -->
+            <!-- Date Selection -->
             <div>
               <label for="date" class="block mb-2 text-sm font-medium text-gray-700">Select Date</label>
               <input type="date" id="date" name="date" class="w-full p-3 border border-yellow-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800" required>
             </div>
-            <div>
+
+            <!-- Time Selection (Initially hidden) -->
+            <div id="time-container" class="opacity-0 max-h-0 transition-all duration-500 ease-in-out overflow-hidden">
               <label for="time" class="block mb-2 text-sm font-medium text-gray-700">Select Time</label>
               <select id="time" name="time" class="w-full p-3 border border-yellow-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800" required>
                 <option value="" disabled selected>Select a time</option>
@@ -875,6 +884,12 @@
       // Enable and show predefined time slots for that date.
       timeSelect.disabled = false;
     }
+  });
+  document.getElementById('date').addEventListener('change', function() {
+    const timeContainer = document.getElementById('time-container');
+    // Show the time input with a smooth transition
+    timeContainer.style.opacity = '1';
+    timeContainer.style.maxHeight = '150px';  // Enough height to fully show the dropdown
   });
 </script>
 
