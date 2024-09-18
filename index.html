@@ -5,7 +5,7 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lifeplan</title>
+  <title>The Bolt Solution</title>
   <!-- external css -->
   <link href="./assets/css/external.css" rel="stylesheet">
   <!-- output  -->
@@ -172,7 +172,7 @@
         <!-- Megamenu ends here -->
       </li>
 
-      <li><a class="text-md text-black-400 links p-2 rounded" href="#register">Help</a></li>
+      <li><a class="text-md text-black-400 links p-2 rounded" href="./aboutus">About Us</a></li>
     </ul>
 
     <!-- Login Buttons -->
@@ -180,7 +180,7 @@
       <a class="xl:py-2 xl:px-6 lg:px-1 lg:py-2 hover:bg-fonttext-fontcolor text-sm text-fontcolor hover:text-white hover:bg-fontcolor font-bold transition duration-200"
         href="#contact">Contact Us</a>
       <a class="xl:py-2 xl:px-6 lg:px-1 lg:py-2 hover:bg-fontcolor text-sm text-fontcolor hover:text-white font-bold border border-fontcolor transition duration-200"
-        href="#">Get Started</a>
+        href="#getstarted">Get Started</a>
     </div>
   </nav>
 
@@ -332,8 +332,10 @@
             Started</button>
         </div>
       </div>
-      <div class="w-full lg:w-4/12 p-4 lg:p-0 ">
-        <img src="./assets/images/front.jpeg" class="arch-img object-cover w-full" alt="image text">
+      <div class="w-full lg:w-4/12 p-4 lg:p-0">
+        <dotlottie-player src="https://lottie.host/e658afe9-3bd9-4223-ba3c-62d11b7c8bcb/iBMslkZomH.json"
+          background="transparent" speed="1" style="width: 100%; height: auto;" loop autoplay>
+        </dotlottie-player>
       </div>
     </div>
 
@@ -441,7 +443,7 @@
         <div class="container">
           <div class="card">
             <div class="image">
-              <img href="#" class="w-full object-fit" src="./assets/images/front.jpeg">
+              <img href="#" class="w-full object-fit" src="./assets/images/1.jpg">
               <h2 class="text-xl font-semibold flex justify-center items-center p-5">Policy Quoting</h2>
             </div>
 
@@ -471,7 +473,7 @@
         <div class="container">
           <div class="card">
             <div class="image">
-              <img href="#" class="w-full object-fit" src="./assets/images/front.jpeg">
+              <img href="#" class="w-full object-fit" src="./assets/images/2.jpg">
               <h2 class="text-xl font-semibold flex justify-center items-center p-5">Servicing</h2>
             </div>
 
@@ -522,7 +524,7 @@
         <div class="container">
           <div class="card">
             <div class="image">
-              <img href="#" class="w-full object-fit" src="./assets/images/front.jpeg">
+              <img href="#" class="w-full object-fit" src="./assets/images/3.jpg">
               <h2 class="text-xl font-semibold flex justify-center items-center p-5">Data Entry</h2>
             </div>
 
@@ -673,7 +675,11 @@
   <!-- End Contact Info Section -->
   </div>
 
-  <div
+  <h1 class="text-3xl text-center font-bold ">
+    Get Started With Us
+  </h1>
+
+  <div id="getstarted"
     class="row-10 flex flex-col mb-16 lg:flex-row justify-center items-center mt-8 space-y-8 lg:space-y-0 lg:space-x-8"
     data-aos="fade-up">
     <!-- Contact Form Section -->
@@ -870,7 +876,14 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+
+
+
 <script>
+
+
 
   // Burger menus
   document.addEventListener('DOMContentLoaded', function () {
