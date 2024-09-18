@@ -624,123 +624,121 @@
   </div>
 
 
-  <section id="contact" class="contact section py-16" data-aos="fade-up">
-    <!-- Section Title -->
-    <div class="container mx-auto text-center" data-aos="fade-up">
-      <h2 class="text-3xl font-bold text-blue-800">Contact</h2>
-    </div>
-    <p class="text-gray-500 text-center mt-2">
-      Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit
-    </p>
-    <!-- End Section Title -->
+ 
 
-    <div class="container mx-auto mt-12" data-aos="fade-up" data-aos-delay="100">
-      <div class="flex flex-wrap lg:flex-nowrap justify-center lg:justify-between space-y-6 lg:space-y-0 lg:space-x-6">
-        <!-- Contact Info Section -->
-        <div class="w-full lg:w-1/3 flex justify-center lg:justify-start">
-          <div class="info-container bg-gray-100 p-8 rounded-lg shadow-lg w-full lg:w-auto">
-            <div class="info-item flex mb-8" data-aos="fade-up" data-aos-delay="200">
-              <i class="bi bi-geo-alt text-yellow-500 text-3xl mr-4"></i>
-              <div>
-                <h3 class="text-xl font-semibold text-blue-800">Address</h3>
-                <p class="text-gray-600">A108 Adam Street, New York, NY 535022</p>
-              </div>
-            </div>
-            <div class="info-item flex mb-8" data-aos="fade-up" data-aos-delay="300">
-              <i class="bi bi-telephone text-yellow-500 text-3xl mr-4"></i>
-              <div>
-                <h3 class="text-xl font-semibold text-blue-800">Call Us</h3>
-                <p class="text-gray-600">+1 5589 55488 55</p>
-              </div>
-            </div>
-            <div class="info-item flex mb-8" data-aos="fade-up" data-aos-delay="400">
-              <i class="bi bi-envelope text-yellow-500 text-3xl mr-4"></i>
-              <div>
-                <h3 class="text-xl font-semibold text-blue-800">Email Us</h3>
-                <p class="text-gray-600">info@example.com</p>
-              </div>
-            </div>
-            <div class="info-item flex" data-aos="fade-up" data-aos-delay="500">
-              <i class="bi bi-clock text-yellow-500 text-3xl mr-4"></i>
-              <div>
-                <h3 class="text-xl font-semibold text-blue-800">Open Hours</h3>
-                <p class="text-gray-600">Mon-Sat: 11AM - 23PM</p>
-              </div>
-            </div>
+   <!-- Row 10 (Contact Info) -->
+   <div
+   class="row-10 flex flex-col mb-16 lg:flex-row justify-between items-center mt-8 space-y-8 lg:space-y-0 lg:space-x-8" data-aos="fade-up">
+  
+    <!-- Contact Info Section -->
+    <div class="w-full lg:w-3/3 flex justify-center lg:justify-center">
+      <div class="info-container  bg-gray-100 p-8 rounded-lg shadow-lg w-full lg:w-6/12">
+        <div class="info-item flex  justify-center mb-8" data-aos="fade-up" data-aos-delay="200">
+          <i class="bi bi-geo-alt text-yellow-500 text-3xl mr-4"></i>
+          <div>
+            <h3 class="text-xl font-semibold text-blue-800">Address</h3>
+            <p class="text-gray-600">A108 Adam Street, New York, NY 535022</p>
+          </div>
+        
+        <div class="info-item flex mb-8" data-aos="fade-up" data-aos-delay="300">
+          <i class="bi bi-telephone text-yellow-500 text-3xl mr-4"></i>
+          <div>
+            <h3 class="text-xl font-semibold text-blue-800">Call Us</h3>
+            <p class="text-gray-600">+1 5589 55488 55</p>
           </div>
         </div>
-        <!-- End Contact Info Section -->
-
-        <!-- Contact Form Section -->
-        <div class="w-full lg:w-2/3">
-          <form action="forms/contact.php" method="post" class="bg-white p-8 rounded-lg shadow-lg space-y-6"
-            data-aos="fade" data-aos-delay="100">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <input type="text" name="name"
-                  class="w-full p-3 border border-yellow-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800"
-                  placeholder="Your Name" required>
-              </div>
-              <div>
-                <input type="email" name="email"
-                  class="w-full p-3 border border-yellow-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800"
-                  placeholder="Your Email" required>
-              </div>
-            </div>
-
-            <!-- New Phone Number Input -->
-            <div>
-              <input type="tel" name="phone"
-                class="w-full p-3 border border-yellow-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800"
-                placeholder="Your Phone Number" required pattern="[0-9]{10}">
-            </div>
-
-            <!-- Date Selection -->
-            <div>
-              <label for="date" class="block mb-2 text-sm font-medium text-gray-700">Select Date</label>
-              <input type="date" id="date" name="date"
-                class="w-full p-3 border border-yellow-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800"
-                required>
-            </div>
-
-            <!-- Time Selection (Initially hidden) -->
-            <div id="time-container" class="opacity-0 max-h-0 transition-all duration-500 ease-in-out overflow-hidden">
-              <label for="time" class="block mb-2 text-sm font-medium text-gray-700">Select Time</label>
-              <select id="time" name="time"
-                class="w-full p-3 border border-yellow-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800"
-                required>
-                <option value="" disabled selected>Select a time</option>
-                <option value="10:00">10:00 AM</option>
-                <option value="11:00">11:00 AM</option>
-                <option value="14:00">2:00 PM</option>
-                <option value="16:00">4:00 PM</option>
-              </select>
-            </div>
-
-            <div>
-              <input type="text" name="subject"
-                class="w-full p-3 border border-yellow-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800"
-                placeholder="Subject" required>
-            </div>
-            <div>
-              <textarea name="message" rows="8"
-                class="w-full p-3 border border-yellow-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800"
-                placeholder="Message" required></textarea>
-            </div>
-
-            <div class="text-center">
-              <button type="submit"
-                class="bg-blue-800 text-white py-3 px-6 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500">Submit</button>
-            </div>
-          </form>
+      </div>
+        <div class="info-item flex justify-center mb-8" data-aos="fade-up" data-aos-delay="400">
+          <i class="bi bi-envelope text-yellow-500 text-3xl mr-4"></i>
+          <div>
+            <h3 class="text-xl font-semibold text-blue-800">Email Us</h3>
+            <p class="text-gray-600">info@example.com</p>
+          </div>
+        
+        <div class="info-item flex " data-aos="fade-up" data-aos-delay="500">
+          <i class="bi bi-clock text-yellow-500 text-3xl mr-4"></i>
+          <div>
+            <h3 class="text-xl font-semibold text-blue-800">Open Hours</h3>
+            <p class="text-gray-600">Mon-Sat: 11AM - 23PM</p>
+          </div>
         </div>
-        <!-- End Contact Form Section -->
+      </div>
+      </div>
       </div>
     </div>
-  </section>
+    <!-- End Contact Info Section -->
+ </div>
 
+ <div
+   class="row-10 flex flex-col mb-16 lg:flex-row justify-center items-center mt-8 space-y-8 lg:space-y-0 lg:space-x-8" data-aos="fade-up">
+  <!-- Contact Form Section -->
+  <div class="w-full lg:w-2/3">
+    <form action="forms/contact.php" method="post" class="bg-white p-8 rounded-lg shadow-lg space-y-6"
+      data-aos="fade" data-aos-delay="100">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <input type="text" name="name"
+            class="w-full p-3 border border-yellow-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800"
+            placeholder="Your Name" required>
+        </div>
+        <div>
+          <input type="email" name="email"
+            class="w-full p-3 border border-yellow-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800"
+            placeholder="Your Email" required>
+        </div>
+      </div>
 
-  <!-- Row 10 (Testimonial and Contact Section) -->
+      <!-- New Phone Number Input -->
+      <div>
+        <input type="tel" name="phone"
+          class="w-full p-3 border border-yellow-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800"
+          placeholder="Your Phone Number" required pattern="[0-9]{10}">
+      </div>
+
+      <!-- Date Selection -->
+      <div>
+        <label for="date" class="block mb-2 text-sm font-medium text-gray-700">Select Date</label>
+        <input type="date" id="date" name="date"
+          class="w-full p-3 border border-yellow-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800"
+          required>
+      </div>
+
+      <!-- Time Selection (Initially hidden) -->
+      <div id="time-container" class="opacity-0 max-h-0 transition-all duration-500 ease-in-out overflow-hidden">
+        <label for="time" class="block mb-2 text-sm font-medium text-gray-700">Select Time</label>
+        <select id="time" name="time"
+          class="w-full p-3 border border-yellow-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800"
+          required>
+          <option value="" disabled selected>Select a time</option>
+          <option value="10:00">10:00 AM</option>
+          <option value="11:00">11:00 AM</option>
+          <option value="14:00">2:00 PM</option>
+          <option value="16:00">4:00 PM</option>
+        </select>
+      </div>
+
+      <div>
+        <input type="text" name="subject"
+          class="w-full p-3 border border-yellow-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800"
+          placeholder="Subject" required>
+      </div>
+      <div>
+        <textarea name="message" rows="8"
+          class="w-full p-3 border border-yellow-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800"
+          placeholder="Message" required></textarea>
+      </div>
+
+      <div class="text-center">
+        <button type="submit"
+          class="bg-blue-800 text-white py-3 px-6 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500">Submit</button>
+      </div>
+    </form>
+  </div>
+  <!-- End Contact Form Section -->
+  
+ </div>
+
+  <!-- Row 11 () -->
   <div
     class="row-10 flex flex-col mb-16 lg:flex-row justify-between items-center mt-8 space-y-8 lg:space-y-0 lg:space-x-8" data-aos="fade-up">
     <div class="bg-blue-50 p-8 rounded-lg w-full lg:w-6/12 text-center lg:text-left">
@@ -775,7 +773,7 @@
     </div>
   </div>
 
-  <!-- Row 11 (Promo Section) -->
+  <!-- Row 12 (Promo Section) -->
   <div class="row-11 mt-8 bg-blue-600 text-white p-12 flex flex-col lg:flex-row justify-between items-center" data-aos="fade-up">
     <div class="w-full lg:w-6/12 text-center lg:text-left mb-4 lg:mb-0">
       <h2 class="text-2xl xl:text-4xl font-bold font-futuraAlt">Get life insurance.<br> Get a Wealth Bonus.</h2>
@@ -796,7 +794,7 @@
 
 
 
-  <!-- Row 12 (Footer Section) -->
+  <!-- Row 13 (Footer Section) -->
   <footer class="row-12 py-12 mt-8 text-center lg:text-left " data-aos="fade-up">
     <div class="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-5 gap-8">
 
