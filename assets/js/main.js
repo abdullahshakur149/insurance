@@ -1,11 +1,14 @@
-// When the user scrolls down 20px from the top of the document, slide down the navbar
-// When the user scrolls to the top of the page, slide up the navbar (50px out of the top view)
-window.onscroll = function () { scrollFunction() };
+// Wait until the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", function () {
+    const navbar = document.getElementById("navbar");
 
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("navbar").style.top = "0";
-    } else {
-        document.getElementById("navbar").style.top = "-50px";
-    }
-}
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 50) {
+            // Add the class when the page is scrolled more than 50px
+            navbar.classList.add("scrolled");
+        } else {
+            // Remove the class when the page is at the top
+            navbar.classList.remove("scrolled");
+        }
+    });
+});
