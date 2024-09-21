@@ -89,6 +89,7 @@ body {
 .p-8 {
   padding: 2rem;
 }
+
 .testimonial-slide {
   transition: opacity 0.5s ease-in-out;
 }
@@ -118,6 +119,7 @@ body {
   flex-direction: column;
   transition: 0.3s ease-in-out;
 }
+
 .container .card:hover {
   height: 320px;
 }
@@ -126,7 +128,6 @@ body {
   position: relative;
   width: 260px;
   height: 260px;
-
   top: -40%;
   left: 8px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
@@ -144,7 +145,6 @@ body {
   padding: 10px 15px;
   color: #111;
   text-align: center;
-
   visibility: hidden;
   opacity: 0;
   transition: 0.3s ease-in-out;
@@ -156,6 +156,7 @@ body {
   opacity: 1;
   transition-delay: 0.2s;
 }
+
 /* contact form */
 .contact {
   padding: 25px;
@@ -182,6 +183,7 @@ body {
   flex-direction: column;
   transition: 0.3s ease-in-out;
 }
+
 .container .card:hover {
   height: 320px;
 }
@@ -190,7 +192,6 @@ body {
   position: relative;
   width: 260px;
   height: 260px;
-
   top: -40%;
   left: 8px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
@@ -208,7 +209,6 @@ body {
   padding: 10px 15px;
   color: #111;
   text-align: center;
-
   visibility: hidden;
   opacity: 0;
   transition: 0.3s ease-in-out;
@@ -216,7 +216,6 @@ body {
 
 .container .card:hover .content {
   margin-top: 0px;
-  
   visibility: visible;
   opacity: 1;
   transition-delay: 0.2s;
@@ -236,4 +235,76 @@ p {
 #navbar.scrolled {
   background-color: rgba(255, 255, 255, 0.9);
   padding: 10px 20px;
+}
+
+/* About Us Page Styles */
+.about-section {
+  padding: 60px 20px;
+  background-color: #f8f9fa;
+}
+
+.about-heading {
+  font-size: 42px;
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.about-subheading {
+  font-size: 24px;
+  text-align: center;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.about-section h2 {
+  font-size: 28px;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.8;
+}
+
+.about-section img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+footer a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }

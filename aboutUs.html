@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us – The Bolt Solution</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="./assets/css/external.css" rel="stylesheet">
+  <!-- output  -->
+  <link href="./assets/css/output.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .heading {
+      text-align: center;
+      font-family: 'Bebas Neue', cursive;
+      color: #007bff;
+      font-size: 48px;
+      margin-top: 20px;
+    }
+
+    .subheading {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 40px;
+      color: #555;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section-title {
+      font-size: 28px;
+      font-weight: 700;
+      color: #007bff;
+      margin-bottom: 20px;
+    }
+
+    .section p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #666;
+    }
+
+    .mission,
+    .services {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin-bottom: 40px;
+    }
+
+    .services ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .services li {
+      font-size: 18px;
+      padding: 10px 0;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .services li:last-child {
+      border-bottom: none;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #007bff;
+      color: #fff;
+      text-align: center;
+      border-radius: 4px;
+      font-size: 18px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      color: #fff;
+    }
+
+    footer a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Image styling */
+    .section img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar Logo -->
+  <nav id="navbar" class="relative px-4 py-4 flex justify-between items-center  lg:w-9/12 lg:mx-auto bg-white">
+    <a class="text-2xl lg:text-3xl font-bold leading-none" href="#">
+      <img src="./assets/images/boltsolution.png" class="w-20" alt="Navbar Logo">
+    </a>
+
+    <!-- Mobile Menu -->
+    <div class="lg:hidden">
+      <button class="navbar-burger flex items-center text-fontcolor p-3">
+        <svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <title>Mobile menu</title>
+          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Links -->
+    <ul class="hidden lg:flex xl:space-x-3 lg:space-x-2 lg:ml-6">
+      <li><a class="text-md text-black-400 links p-2 rounded font-bebas" href="#">Home</a></li>
+
+      <!-- Services Dropdown -->
+      <li class="relative group">
+        <a class="text-md text-black-400 links p-2 rounded cursor-pointer font-bebas" href="#">Services</a>
+        <!-- Megamenu starts here -->
+        <div
+          class="absolute w-[700px] xl:-left-40 lg:-left-60 mt-2 hidden bg-white z-50 rounded-xl shadow-lg group-hover:flex justify-between p-8 transition-all duration-200 ease-in-out">
+          <div class="flex space-x-10 w-full">
+            <div>
+              <h3 class="font-semibold mb-4 ">Policy Quoting</h3>
+              <ul class="text-md space-y-2">
+                <li><a class="block text-sm hover:text-fontcolor" href="#">Quoting on AMS</a></li>
+                <li><a class="block hover:text-fontcolor" href="#">Carrier Quoting </a></li>
+                <li><a class="block hover:text-fontcolor" href="#">Manual Submissions</a></li>
+                <li><a class="block hover:text-fontcolor" href="#">Requoting Renewals</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-semibold mb-4">Servicing</h3>
+              <ul class="text-md space-y-2">
+                <li><a class="block hover:text-fontcolor" href="#">Personal Lines & Commercial Lines</a>
+                </li>
+                <li><a class="block hover:text-fontcolor" href="#">ID Cards</a></li>
+                <li><a class="block hover:text-fontcolor" href="#">COIs/EOIs</a></li>
+                <li><a class="block hover:text-fontcolor" href="#">RCT/RCE</a></li>
+                <li><a class="block hover:text-fontcolor" href="#">Cancellation Processing</a></li>
+                <li><a class="block hover:text-fontcolor" href="#">Policy Checking</a></li>
+                <li><a class="block hover:text-fontcolor" href="#">Mortgage Changes</a></li>
+                <li><a class="block hover:text-fontcolor" href="#">Changes to Billing</a></li>
+                <li><a class="block hover:text-fontcolor" href="#">Dec Page Requests</a></li>
+                <li><a class="block hover:text-fontcolor" href="#">General Endorsements</a></li>
+                <li><a class="block hover:text-fontcolor" href="#">Requests for Copies of Documents</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-semibold mb-4">Data Entry</h3>
+              <ul class="text-md space-y-2">
+                <li><a class="block hover:text-fontcolor" href="#">Audit Follow Up</a></li>
+                <li><a class="block hover:text-fontcolor" href="#">Weekly Reporting</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Megamenu ends here -->
+      </li>
+
+      <li><a class="text-md text-black-400 links p-2 rounded font-bebas" href="./aboutUs.html">About Us</a></li>
+    </ul>
+
+    <!-- Login Buttons -->
+    <div class="hidden lg:flex lg:items-center lg:ml-auto space-x-4">
+      <a class="xl:py-2 xl:px-6 lg:px-1 lg:py-2 hover:bg-fonttext-fontcolor text-sm text-fontcolor hover:text-white hover:bg-fontcolor font-bold transition duration-200"
+        href="#contact">Contact Us</a>
+      <a class="xl:py-2 xl:px-6 lg:px-1 lg:py-2 hover:bg-fontcolor text-sm text-fontcolor hover:text-white font-bold border border-fontcolor transition duration-200"
+        href="#getstarted">Get Started</a>
+    </div>
+  </nav>
+
+
+
+
+
+  <!-- Mobile Menu  -->
+  <div class="navbar-menu relative z-50 hidden lg:hidden">
+    <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+    <nav class="fixed top-0 left-0 bottom-0  flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+      <div class="flex items-center mb-8">
+        <a class="mr-auto text-3xl font-bold leading-none" href="#">
+          <svg class="h-12" alt="logo" viewBox="0 0 10240 10240">
+            <!-- SVG Path here -->
+          </svg>
+        </a>
+        <button class="navbar-close">
+          <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg"
+            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div>
+        <ul>
+          <li class="mb-1">
+            <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+              href="#">Insurance 101</a>
+          </li>
+          <!-- Services with Megamenu -->
+          <li class="mb-1">
+            <button
+              class=" p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded flex  items-center justify-between w-full"
+              onclick="toggleMobileMegamenu()">
+              Services
+              <svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+              </svg>
+            </button>
+
+            <div id="mobile-megamenu" class="hidden">
+              <div class="flex flex-col space-y-6 py-6">
+                <div>
+                  <h3 class="font-semibold mb-4">Policy Quoting</h3>
+                  <ul class="text-sm space-y-2">
+                    <li><a class="block text-sm hover:text-fontcolor" href="#">Quoting on AMS</a></li>
+                    <li><a class="block hover:text-fontcolor" href="#">Quoting Carriers</a></li>
+                    <li><a class="block hover:text-fontcolor" href="#">Manual Submissions</a></li>
+                    <li><a class="block hover:text-fontcolor" href="#">Requoting Renewals</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 class="font-semibold mb-4">Servicing</h3>
+                  <ul class="text-sm space-y-2">
+                    <li><a class="block hover:text-fontcolor" href="#"> Personal Lines & Commercial Lines</a></li>
+                    <li><a class="block hover:text-fontcolor" href="#">ID Cards</a></li>
+                    <li><a class="block hover:text-fontcolor" href="#">COIs/EOIs</a></li>
+                    <li><a class="block hover:text-fontcolor" href="#">RCT/RCE</a></li>
+                    <li><a class="block hover:text-fontcolor" href="#">Cancellation Processing</a></li>
+                    <li><a class="block hover:text-fontcolor" href="#">Policy Checking</a></li>
+                    <li><a class="block hover:text-fontcolor" href="#">Mortgage Changes</a></li>
+                    <li><a class="block hover:text-fontcolor" href="#">Changes to Billing</a></li>
+                    <li><a class="block hover:text-fontcolor" href="#">Dec Page Requests</a></li>
+                    <li><a class="block hover:text-fontcolor" href="#">General Endorsements</a></li>
+                    <li><a class="block hover:text-fontcolor" href="#">Requests for Copies of Documents</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 class="font-semibold mb-4">Data Entry</h3>
+                  <ul class="text-sm space-y-2">
+                    <li><a class="block hover:text-fontcolor" href="#">Audit Follow Up</a></li>
+                    <li><a class="block hover:text-fontcolor" href="#">Weekly Reporting</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            
+            
+            <!-- Megamenu for Mobile ends here -->
+          </li>
+
+          <li class="mb-1">
+            <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+              href="#">Pricing</a>
+          </li>
+          <li class="mb-1">
+            <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+              href="#">Help</a>
+          </li>
+          <li class="mb-1">
+            <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+              href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div class="mt-auto">
+        <div class="pt-6">
+          <a class="block px-4 py-3 mb-3  text-xs text-center font-semibold leading-none bg-gray-50 hover:bg-gray-100 rounded-xl"
+            href="#contact">Contact Us</a>
+          <a class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-600 hover:bg-blue-700  rounded-xl"
+            href="#">Calculate yours</a>
+        </div>
+        <p class="my-4 text-xs text-center text-gray-400">
+          <span>Copyright © 2021</span>
+        </p>
+      </div>
+    </nav>
+  </div>
+
+  <div class="container flex-col">
+    <h1 class="heading">About Us</h1>
+    <h2 class="subheading">Your Strategic Partner in Transforming Insurance Operations</h2>
+
+    <section class="mission section">
+      <h2 class="section-title">Our Mission</h2>
+      <img src="https://via.placeholder.com/1200x400?text=Our+Mission+Image" alt="Our Mission Image">
+      <p>
+        At The Bolt Solution, our mission is to simplify the backend operations of insurance agencies, enabling them to thrive in an increasingly competitive marketplace. By taking care of time-consuming tasks such as quoting, policy servicing, and data entry, we allow you to focus on growing your business and enhancing client satisfaction. Our goal is to offer fast, reliable, and high-quality backend support that accelerates agency growth while reducing operational costs.
+      </p>
+    </section>
+
+    <section class="services section">
+      <h2 class="section-title">What We Do</h2>
+      <img src="https://via.placeholder.com/1200x400?text=What+We+Do+Image" alt="What We Do Image">
+      <p>We provide comprehensive backend support for insurance agencies, including:</p>
+      <ul>
+        <li><strong>Quoting Solutions:</strong> Fast, accurate quoting across all carriers, with a turnaround time of less than 24 hours.</li>
+        <li><strong>Policy Servicing & Renewals:</strong> We manage renewals and servicing tasks, allowing agents to focus on client acquisition.</li>
+        <li><strong>Compliance & Data Entry:</strong> We handle administrative tasks necessary for compliance and smooth operations.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Why Choose The Bolt Solution?</h2>
+      <img src="https://via.placeholder.com/1200x400?text=Why+Choose+Us+Image" alt="Why Choose Us Image">
+      <p>
+        We specialize in providing backend support specifically for insurance agencies. This means we understand your unique challenges and deliver solutions tailored to your needs. Our services can reduce your operational workload by up to 50%, freeing up time for building relationships and closing deals. Our clients have experienced measurable results, including a 32% expansion in their book of business and a 68% reduction in hiring and training costs.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Our Approach</h2>
+      <img src="https://via.placeholder.com/1200x400?text=Our+Approach+Image" alt="Our Approach Image">
+      <p>
+        We take pride in building long-term relationships by delivering consistent, high-quality results. Our proactive management approach ensures that we don't just complete tasks—we enhance your workflow and keep you ahead of the competition. With our reliable and scalable services, we help agencies grow while cutting costs and maintaining efficiency.
+      </p>
+    </section>
+
+    <div class="text-center">
+      <a href="#" class="btn">Get Started Today</a>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2024 The Bolt Solution. All rights reserved. | <a href="#">Contact Us</a></p>
+  </footer>
+
+</body>
+
+</html>
