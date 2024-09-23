@@ -686,10 +686,6 @@ video {
   margin-left: 2rem;
 }
 
-.mr-2 {
-  margin-right: 0.5rem;
-}
-
 .mr-20 {
   margin-right: 5rem;
 }
@@ -1559,6 +1555,10 @@ video {
     width: 75%;
   }
 
+  .lg\:w-10\/12 {
+    width: 83.333333%;
+  }
+
   .lg\:grid-cols-5 {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
@@ -1680,6 +1680,14 @@ video {
 
   .xl\:mt-24 {
     margin-top: 6rem;
+  }
+
+  .xl\:w-6\/12 {
+    width: 50%;
+  }
+
+  .xl\:w-9\/12 {
+    width: 75%;
   }
 
   .xl\:translate-x-32 {
