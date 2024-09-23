@@ -680,7 +680,7 @@
     data-aos="fade-up">
     <!-- Contact Form Section -->
     <div class="w-full lg:w-2/3">
-      <form action="forms/contact.php" method="post" class="bg-white p-8 rounded-lg shadow-lg space-y-6" data-aos="fade"
+      <form action="" method="post" class="bg-white p-8 rounded-lg shadow-lg space-y-6" data-aos="fade"
         data-aos-delay="100">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
@@ -699,7 +699,7 @@
         <div>
           <input type="tel" name="phone"
             class="w-full p-3 border border-yellow-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800"
-            placeholder="Your Phone Number" required pattern="[0-9]{10}">
+            placeholder="Your Phone Number">
         </div>
 
         <!-- Date Selection -->
@@ -736,9 +736,20 @@
         </div>
 
         <div class="text-center">
-          <button type="submit"
+          <button type="submit" name="getstarted"
             class="bg-blue-800 text-white py-3 px-6 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500">Submit</button>
         </div>
+
+
+        <!-- Loader (Initially Hidden) -->
+        <div id="loader" class="hidden">
+          <p>Sending your message...</p> <!-- Text for loader -->
+        </div>
+
+        <!-- Message Container (Initially Hidden) -->
+        <div id="message" class="fixed top-0 left-0 w-full p-4 hidden"></div>
+
+
       </form>
     </div>
     <!-- End Contact Form Section -->
@@ -860,18 +871,15 @@
 
 
 <script>
-
-
-
   // Burger menus
-  document.addEventListener('DOMContentLoaded', function () {
+  document.addEventListener('DOMContentLoaded', function() {
     // open
     const burger = document.querySelectorAll('.navbar-burger');
     const menu = document.querySelectorAll('.navbar-menu');
 
     if (burger.length && menu.length) {
       for (var i = 0; i < burger.length; i++) {
-        burger[i].addEventListener('click', function () {
+        burger[i].addEventListener('click', function() {
           for (var j = 0; j < menu.length; j++) {
             menu[j].classList.toggle('hidden');
           }
@@ -886,7 +894,7 @@
 
     if (close.length) {
       for (var i = 0; i < close.length; i++) {
-        close[i].addEventListener('click', function () {
+        close[i].addEventListener('click', function() {
           for (var j = 0; j < menu.length; j++) {
             menu[j].classList.toggle('hidden');
           }
@@ -896,7 +904,7 @@
 
     if (backdrop.length) {
       for (var i = 0; i < backdrop.length; i++) {
-        backdrop[i].addEventListener('click', function () {
+        backdrop[i].addEventListener('click', function() {
           for (var j = 0; j < menu.length; j++) {
             menu[j].classList.toggle('hidden');
           }
@@ -917,6 +925,7 @@
 
   // Automatically switch testimonials every 5 seconds (5000ms)
   setInterval(showNextSlide, 5000);
+
   function toggleMobileMegamenu() {
     const megamenu = document.getElementById('mobile-megamenu');
     if (megamenu.classList.contains('hidden')) {
@@ -928,7 +937,7 @@
 </script>
 <script>
   // Predefined time slots based on date selection
-  document.getElementById('date').addEventListener('change', function () {
+  document.getElementById('date').addEventListener('change', function() {
     const selectedDate = this.value;
     const timeSelect = document.getElementById('time');
     // Example logic: You can add more sophisticated rules based on actual requirements.
@@ -937,11 +946,11 @@
       timeSelect.disabled = false;
     }
   });
-  document.getElementById('date').addEventListener('change', function () {
+  document.getElementById('date').addEventListener('change', function() {
     const timeContainer = document.getElementById('time-container');
     // Show the time input with a smooth transition
     timeContainer.style.opacity = '1';
-    timeContainer.style.maxHeight = '150px';  // Enough height to fully show the dropdown
+    timeContainer.style.maxHeight = '150px'; // Enough height to fully show the dropdown
   });
 </script>
 
@@ -951,6 +960,129 @@
     once: false, // Whether animation should happen only once
   });
 </script>
+
+<?php
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+if (isset($_POST['getstarted'])) {
+  $name = $_POST['name'];
+  $email = $_POST['email'];
+  $phone = $_POST['phone'];
+  $date = $_POST['date'];
+  $time = $_POST['time'];
+  $subject = $_POST['subject'];
+  $message = $_POST['message'];
+
+  // Load Composer's autoloader
+  require 'PHPMAILER/Exception.php';
+  require 'PHPMAILER/PHPMailer.php';
+  require 'PHPMAILER/SMTP.php';
+
+  // Create a new instance of PHPMailer
+  $mail = new PHPMailer(true);
+
+  try {
+    // Server settings for sending an email to you
+    $mail->SMTPDebug = SMTP::DEBUG_OFF;
+    $mail->isSMTP();
+    $mail->Host = 'smtp.gmail.com';
+    $mail->SMTPAuth = true;
+    $mail->Username = 'sales@theboltsolution.com';
+    $mail->Password = 'wkhzharrfybqasea';
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+    $mail->Port = 465;
+
+    // Recipients
+    $mail->setFrom('sales@theboltsolution.com', 'The Bolt Solution - Contact Form');
+    $mail->addAddress('sales@theboltsolution.com', 'Admin');
+
+    // Email content for Admin
+    $mail->isHTML(true);
+    $mail->Subject = 'New Contact Form Submission';
+    $mail->Body = "
+            <h3>New Contact Form Submission</h3>
+            <p><strong>Name:</strong> {$name}</p>
+            <p><strong>Email:</strong> {$email}</p>
+            <p><strong>Phone:</strong> {$phone}</p>
+            <p><strong>Date:</strong> {$date}</p>
+            <p><strong>Time:</strong> {$time}</p>
+            <p><strong>Subject:</strong> {$subject}</p>
+            <p><strong>Message:</strong> {$message}</p>";
+
+    // Send the email to Admin
+    $mail->send();
+
+    // Send confirmation email to the user
+    $mail->clearAddresses();
+    $mail->addAddress($email); // Send to user's email
+    $mail->Subject = 'We have received your request';
+    $mail->Body = "
+            <h3>Thank you for contacting us!</h3>
+            <p>Dear {$name},</p>
+            <p>We have received your request and someone from our team will reach out to you shortly.</p>
+            <p><strong>Your details:</strong></p>
+            <ul>
+                <li><strong>Date:</strong> {$date}</li>
+                <li><strong>Time:</strong> {$time}</li>
+                <li><strong>Subject:</strong> {$subject}</li>
+            </ul>
+            <p>Thank you,<br>The Bolt Solution Team</p>";
+
+    // Send confirmation to user
+    $mail->send();
+
+    // Return success response
+    echo json_encode(['status' => 'success']);
+  } catch (Exception $e) {
+    // Return error response
+    echo json_encode(['status' => 'error', 'message' => $mail->ErrorInfo]);
+  }
+}
+?>
+
+<script>
+  document.querySelector('form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // Show loader and hide message initially
+    document.getElementById('loader').classList.remove('hidden');
+    document.getElementById('message').classList.add('hidden');
+
+    var formData = new FormData(this);
+
+    fetch('', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => response.json())
+      .then(data => {
+        // Hide the loader
+        document.getElementById('loader').classList.add('hidden');
+
+        // Show success or error message
+        var messageDiv = document.getElementById('message');
+        if (data.status === 'success') {
+          messageDiv.innerText = 'Your message has been sent successfully!';
+        } else {
+          messageDiv.innerText = 'Error sending message: ' + data.message;
+        }
+        messageDiv.classList.remove('hidden'); // Show the message div
+      })
+      .catch(error => {
+        // Hide the loader and show error message
+        document.getElementById('loader').classList.add('hidden');
+        var messageDiv = document.getElementById('message');
+        messageDiv.innerText = 'Error sending message: ' + error.message;
+        messageDiv.classList.remove('hidden');
+      });
+  });
+</script>
+
+
+
 
 
 </html>
