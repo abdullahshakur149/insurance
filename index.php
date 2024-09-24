@@ -671,9 +671,6 @@
   <!-- End Contact Info Section -->
   </div>
 
-  <h1 class="text-3xl text-center font-bold">
-    Get Started With Us
-  </h1>
 
   <h1 class="text-3xl text-center font-bold">Get Started With Us</h1>
 
@@ -788,7 +785,7 @@
   </div>
 
   <!-- Row 12 (Promo Section) -->
-  <div class="row-11 promo mt-8 bg-blue-600 text-white p-12 flex flex-col lg:flex-row justify-between items-center"
+  <div style="background-color: rgb(34 34 124);" class="row-11 promo mt-8 bg-blue-600 text-white p-12 flex flex-col lg:flex-row justify-between items-center"
     data-aos="fade-up">
     <div class="w-full lg:w-6/12 text-center lg:text-left mb-4 lg:mb-0">
       <h2 class="text-2xl xl:text-4xl font-bold font-futuraAlt">Get life insurance.<br> Get a Wealth Bonus.</h2>
@@ -811,7 +808,7 @@
 
 
   <!-- Row 13 (Footer Section) -->
-  <footer class="row-12 footer py-12 mt-8 text-center   " data-aos="fade-up">
+  <footer class="row-12 footer py-12  text-center   " data-aos="fade-up">
     <div class="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-5 gap-8">
 
       <!-- Company Info -->
