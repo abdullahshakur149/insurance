@@ -671,51 +671,49 @@
   <!-- End Contact Info Section -->
   </div>
 
-  <h1 class="text-3xl text-center font-bold ">
+  <h1 class="text-3xl text-center font-bold">
     Get Started With Us
   </h1>
 
+  <h1 class="text-3xl text-center font-bold">Get Started With Us</h1>
+
   <div id="getstarted"
-    class="row-10 flex flex-col mb-16 lg:flex-row justify-center items-center mt-8 space-y-8 lg:space-y-0 lg:space-x-8"
-    data-aos="fade-up">
+    class="row-10 flex flex-col mb-16 lg:flex-row justify-center items-center mt-8 space-y-8 lg:space-y-0 lg:space-x-8">
+
     <!-- Contact Form Section -->
     <div class="w-full lg:w-2/3">
-      <form action="" method="post" class="bg-white p-8 rounded-lg shadow-lg space-y-6" data-aos="fade"
-        data-aos-delay="100">
+      <form id="contactForm" class="bg-white p-8 rounded-lg shadow-lg space-y-6" method="POST">
+
+        <!-- Name and Email -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <input type="text" name="name"
-              class="w-full p-3 border border-yellow-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800"
-              placeholder="Your Name" required>
+            <input type="text" name="name" placeholder="Your Name" required
+              class="w-full p-3 border border-yellow-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800">
           </div>
           <div>
-            <input type="email" name="email"
-              class="w-full p-3 border border-yellow-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800"
-              placeholder="Your Email" required>
+            <input type="email" name="email" placeholder="Your Email" required
+              class="w-full p-3 border border-yellow-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800">
           </div>
         </div>
 
-        <!-- New Phone Number Input -->
+        <!-- Phone Number -->
         <div>
-          <input type="tel" name="phone"
-            class="w-full p-3 border border-yellow-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800"
-            placeholder="Your Phone Number">
+          <input type="tel" name="phone" placeholder="Your Phone Number"
+            class="w-full p-3 border border-yellow-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800">
         </div>
 
         <!-- Date Selection -->
         <div>
           <label for="date" class="block mb-2 text-sm font-medium text-gray-700">Select Date</label>
-          <input type="date" id="date" name="date"
-            class="w-full p-3 border border-yellow-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800"
-            required>
+          <input type="date" id="date" name="date" required
+            class="w-full p-3 border border-yellow-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800">
         </div>
 
-        <!-- Time Selection (Initially hidden) -->
-        <div id="time-container" class="opacity-0 max-h-0 transition-all duration-500 ease-in-out overflow-hidden">
+        <!-- Time Selection -->
+        <div>
           <label for="time" class="block mb-2 text-sm font-medium text-gray-700">Select Time</label>
-          <select id="time" name="time"
-            class="w-full p-3 border border-yellow-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800"
-            required>
+          <select id="time" name="time" required
+            class="w-full p-3 border border-yellow-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800">
             <option value="" disabled selected>Select a time</option>
             <option value="10:00">10:00 AM</option>
             <option value="11:00">11:00 AM</option>
@@ -724,37 +722,34 @@
           </select>
         </div>
 
+        <!-- Subject and Message -->
         <div>
-          <input type="text" name="subject"
-            class="w-full p-3 border border-yellow-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800"
-            placeholder="Subject" required>
+          <input type="text" name="subject" placeholder="Subject" required
+            class="w-full p-3 border border-yellow-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800">
         </div>
         <div>
-          <textarea name="message" rows="8"
-            class="w-full p-3 border border-yellow-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800"
-            placeholder="Message" required></textarea>
+          <textarea name="message" rows="8" placeholder="Message" required
+            class="w-full p-3 border border-yellow-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800"></textarea>
         </div>
 
+        <!-- Submit Button -->
         <div class="text-center">
-          <button type="submit" name="getstarted"
-            class="bg-blue-800 text-white py-3 px-6 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500">Submit</button>
+          <button type="submit" class="bg-blue-800 text-white py-3 px-6 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500">Submit</button>
         </div>
 
-
-        <!-- Loader (Initially Hidden) -->
+        <!-- Loader -->
         <div id="loader" class="hidden">
-          <p>Sending your message...</p> <!-- Text for loader -->
+          <p>Sending your message...</p>
         </div>
 
-        <!-- Message Container (Initially Hidden) -->
-        <div id="message" class="fixed top-0 left-0 w-full p-4 hidden"></div>
-
-
+        <!-- Message Container -->
+        <div id="message" class="fixed top-0 left-0 w-full p-4 hidden text-center text-white"></div>
       </form>
     </div>
     <!-- End Contact Form Section -->
 
   </div>
+
 
   <!-- Row 11 () -->
   <div
@@ -869,6 +864,55 @@
 
 <script src="./assets/js/main.js"></script>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById("contactForm");
+    const loader = document.getElementById("loader");
+    const messageContainer = document.getElementById("message");
+
+    form.addEventListener("submit", async function(event) {
+      event.preventDefault();
+
+      loader.classList.remove("hidden");
+
+      const formData = new FormData(form);
+
+      try {
+        const response = await fetch(window.location.href, {
+          method: "POST",
+          body: formData,
+          headers: {
+            "Accept": "application/json",
+          },
+        });
+
+        const result = await response.json();
+
+        loader.classList.add("hidden");
+
+        if (result.status === "success") {
+          showMessage("Your message has been sent successfully!", "bg-green-500");
+        } else {
+          showMessage("There was an error sending your message. Please try again.", "bg-red-500");
+        }
+      } catch (error) {
+        loader.classList.add("hidden");
+        showMessage("Something went wrong. Please try again.", "bg-red-500");
+      }
+    });
+
+    function showMessage(message, bgColorClass) {
+      messageContainer.innerText = message;
+      messageContainer.className = `fixed top-0 left-0 w-full p-4 text-center text-white ${bgColorClass}`;
+      messageContainer.classList.remove("hidden");
+
+      setTimeout(() => {
+        messageContainer.classList.add("hidden");
+      }, 5000);
+    }
+  });
+</script>
+
 
 <script>
   // Burger menus
@@ -967,7 +1011,9 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-if (isset($_POST['getstarted'])) {
+$response = [];
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $name = $_POST['name'];
   $email = $_POST['email'];
   $phone = $_POST['phone'];
@@ -976,16 +1022,14 @@ if (isset($_POST['getstarted'])) {
   $subject = $_POST['subject'];
   $message = $_POST['message'];
 
-  // Load Composer's autoloader
   require 'PHPMAILER/Exception.php';
   require 'PHPMAILER/PHPMailer.php';
   require 'PHPMAILER/SMTP.php';
 
-  // Create a new instance of PHPMailer
   $mail = new PHPMailer(true);
 
   try {
-    // Server settings for sending an email to you
+    // SMTP settings
     $mail->SMTPDebug = SMTP::DEBUG_OFF;
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
@@ -995,91 +1039,54 @@ if (isset($_POST['getstarted'])) {
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
     $mail->Port = 465;
 
-    // Recipients
+    // Send to Admin
     $mail->setFrom('sales@theboltsolution.com', 'The Bolt Solution - Contact Form');
     $mail->addAddress('sales@theboltsolution.com', 'Admin');
-
-    // Email content for Admin
     $mail->isHTML(true);
     $mail->Subject = 'New Contact Form Submission';
     $mail->Body = "
-            <h3>New Contact Form Submission</h3>
-            <p><strong>Name:</strong> {$name}</p>
-            <p><strong>Email:</strong> {$email}</p>
-            <p><strong>Phone:</strong> {$phone}</p>
-            <p><strong>Date:</strong> {$date}</p>
-            <p><strong>Time:</strong> {$time}</p>
-            <p><strong>Subject:</strong> {$subject}</p>
-            <p><strong>Message:</strong> {$message}</p>";
+      <h3>New Contact Form Submission</h3>
+      <p><strong>Name:</strong> {$name}</p>
+      <p><strong>Email:</strong> {$email}</p>
+      <p><strong>Phone:</strong> {$phone}</p>
+      <p><strong>Date:</strong> {$date}</p>
+      <p><strong>Time:</strong> {$time}</p>
+      <p><strong>Subject:</strong> {$subject}</p>
+      <p><strong>Message:</strong> {$message}</p>";
 
-    // Send the email to Admin
     $mail->send();
 
-    // Send confirmation email to the user
+    // Confirmation to user
     $mail->clearAddresses();
-    $mail->addAddress($email); // Send to user's email
+    $mail->addAddress($email);
     $mail->Subject = 'We have received your request';
     $mail->Body = "
-            <h3>Thank you for contacting us!</h3>
-            <p>Dear {$name},</p>
-            <p>We have received your request and someone from our team will reach out to you shortly.</p>
-            <p><strong>Your details:</strong></p>
-            <ul>
-                <li><strong>Date:</strong> {$date}</li>
-                <li><strong>Time:</strong> {$time}</li>
-                <li><strong>Subject:</strong> {$subject}</li>
-            </ul>
-            <p>Thank you,<br>The Bolt Solution Team</p>";
+      <h3>Thank you for contacting us!</h3>
+      <p>Dear {$name},</p>
+      <p>We have received your request and someone from our team will reach out to you shortly.</p>
+      <ul>
+          <li><strong>Date:</strong> {$date}</li>
+          <li><strong>Time:</strong> {$time}</li>
+          <li><strong>Subject:</strong> {$subject}</li>
+      </ul>
+      <p>Thank you,<br>The Bolt Solution Team</p>";
 
-    // Send confirmation to user
     $mail->send();
 
-    // Return success response
-    echo json_encode(['status' => 'success']);
+    // Success response
+    $response = ['status' => 'success'];
   } catch (Exception $e) {
-    // Return error response
-    echo json_encode(['status' => 'error', 'message' => $mail->ErrorInfo]);
+    // Error response
+    $response = ['status' => 'error', 'message' => $mail->ErrorInfo];
   }
+
+  // Return JSON response for AJAX
+  header('Content-Type: application/json');
+  echo json_encode($response);
+  exit();
 }
 ?>
 
-<script>
-  document.querySelector('form').addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    // Show loader and hide message initially
-    document.getElementById('loader').classList.remove('hidden');
-    document.getElementById('message').classList.add('hidden');
-
-    var formData = new FormData(this);
-
-    fetch('', {
-        method: 'POST',
-        body: formData
-      })
-      .then(response => response.json())
-      .then(data => {
-        // Hide the loader
-        document.getElementById('loader').classList.add('hidden');
-
-        // Show success or error message
-        var messageDiv = document.getElementById('message');
-        if (data.status === 'success') {
-          messageDiv.innerText = 'Your message has been sent successfully!';
-        } else {
-          messageDiv.innerText = 'Error sending message: ' + data.message;
-        }
-        messageDiv.classList.remove('hidden'); // Show the message div
-      })
-      .catch(error => {
-        // Hide the loader and show error message
-        document.getElementById('loader').classList.add('hidden');
-        var messageDiv = document.getElementById('message');
-        messageDiv.innerText = 'Error sending message: ' + error.message;
-        messageDiv.classList.remove('hidden');
-      });
-  });
-</script>
 
 
 
